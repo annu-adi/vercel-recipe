@@ -20,7 +20,7 @@ function CreateRecipe() {
     const navigate = useNavigate()
     const handleSubmit = (event) => {
         event.preventDefault()
-        axios.post('http://localhost:3001/recipe/create-recipe', recipe)
+        axios.post('https://vrecel-server.vercel.app/recipe/create-recipe', recipe)
         .then(result => {
             navigate('/')
             console.log(result.data)

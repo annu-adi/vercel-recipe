@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 function Home(){
    const [recipes, setRecipes] = useState([])
     useEffect(()=>{
-        axios.get('http://localhost:3001/recipe/recipes')
+        axios.get('https://vrecel-server.vercel.app/recipe/recipes')
         .then(recipes =>{
            setRecipes(recipes.data)
         }).catch(er =>console.log(er))

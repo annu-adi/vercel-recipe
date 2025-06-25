@@ -8,7 +8,7 @@ function Nav() {
     const navigate = useNavigate()
     const handleLogout = () => {
     window.localStorage.clear()
-    axios.get('http://localhost:3001/auth/logout')
+    axios.get('https://vrecel-server.vercel.app/auth/logout')
     .then ( result =>navigate('/'))
     
     .catch(err => console.log(err))

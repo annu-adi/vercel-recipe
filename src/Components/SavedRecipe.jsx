@@ -8,7 +8,7 @@ function SavedRecipe() {
     const [savedRecipes, setSavedRecipes] = useState([])
     const userId = window.localStorage.getItem("id")
     useEffect(()=>{
-        axios.get('http://localhost:3001/recipe/user-recipes/'+userId)
+        axios.get('https://vrecel-server.vercel.app/recipe/user-recipes/'+userId)
         .then(recipes =>{
            setSavedRecipes(recipes.data)
         }).catch(er =>console.log(er))

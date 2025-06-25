@@ -27,7 +27,7 @@ const getRecipe = () =>{
        getRecipe()
      },[])
 const savedRecipe = (recipeId)=>{
-    axios.put('http://localhost:3001/recipe', {userId, recipeId})
+    axios.put('https://vrecel-server.vercel.app/recipe', {userId, recipeId})
     .then(result => (
         
         setSavedRecipes(result.data.savedRecipes) 
