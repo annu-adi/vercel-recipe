@@ -10,14 +10,14 @@ function ReadRecipe() {
     useEffect(()=> {
 const getRecipe = () =>{
 
-        axios.get('http://localhost:3001/recipe/recipe-by-id/'+id)
+        axios.get('https://vercel-server-rosy.vercel.app/recipe/recipe-by-id/'+id)
         .then(result => {
         setRecipe(result.data)
         }).catch(err=> console.log(err))
 }
 
     const fetchSavedRecipes =() =>{
-        axios.get('http://localhost:3001/recipe/saved-recipes/'+userId)
+        axios.get('https://vercel-server-rosy.vercel.app/recipe/saved-recipes/'+userId)
         .then(result =>{
             
             setSavedRecipes(result.data.savedRecipes)
@@ -27,7 +27,7 @@ const getRecipe = () =>{
        getRecipe()
      },[])
 const savedRecipe = (recipeId)=>{
-    axios.put('https://vrecel-server.vercel.app/recipe', {userId, recipeId})
+    axios.put('https://vercel-server-rosy.vercel.app/recipe', {userId, recipeId})
     .then(result => (
         
         setSavedRecipes(result.data.savedRecipes) 

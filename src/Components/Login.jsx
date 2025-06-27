@@ -10,7 +10,7 @@ function Login() {
     axios.defaults.withCredentials = true;
     const handleSubmit = (e) =>{
         e.preventDefault()
-        axios.post('https://vrecel-server.vercel.app/auth/login', {username, password})
+        axios.post('https://vercel-server-rosy.vercel.app/auth/login', {username, password})
         .then(result => {
             window.localStorage.setItem("id",result.data.id)
              console.log(result)

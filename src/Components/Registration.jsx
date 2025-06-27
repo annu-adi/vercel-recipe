@@ -12,7 +12,7 @@ function Registration() {
 
     const handleSubmit = (e) =>{
         e.preventDefault()
-        axios.post('https://vrecel-server.vercel.app/auth/register', {username, password})
+        axios.post('https://vercel-server-rosy.vercel.app/auth/register', {username, password})
         .then(result => 
             {console.log(result)
 
